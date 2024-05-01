@@ -10,8 +10,8 @@ from webpage.views.links import links
 import  webpage.styles.styles as styles
 from webpage.styles.styles import Size
 
-class State(rx.State):
-    pass
+# class State(rx.State):
+#     pass
 
 
 def index() -> rx.Component:
