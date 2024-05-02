@@ -26,6 +26,8 @@ def index() -> rx.Component:
                 width="100%",
                 margin_y=Size.DEFAULT.value,
                 padding=Size.MEDIUM.value,
+                align="center",
+                justify="center"
             ),
 
             align="center",
@@ -43,11 +45,16 @@ app = rx.App(
     stylesheets=styles.STYLESHEETS,
     style=styles.BASE_STYLE,
 )
-
+title = "Seraph page"
 app.add_page(
     index,
-    title="Seraph page",
+    title=title,
     description="Bienvenido a la página de Seraph!",
     image="favicon.ico",
+    meta=[
+        {"name": "og:type", "content": "website"},
+        {"name": "og:title", "content": title},
+        {"name": "og:description", "content": "Bienvenido a la página de Seraph!"},
+    ]
 )
 

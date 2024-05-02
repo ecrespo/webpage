@@ -17,5 +17,6 @@ def links()-> rx.Component:
         link_button("Mi sitio web", "Mi página web", PAGINA_URL,"icons/code.svg"),
         link_button("Email", f"{EMAIL}", f"mailto:<{EMAIL}>","icons/email.svg"),
         widht="100%",
-        spacing="3"
+        spacing="3",
+
     )

@@ -1,7 +1,7 @@
 import reflex as rx
 from datetime import datetime
 
-from webpage.constants import PAGINA_URL
+from webpage.constants import PAGINA_URL, REPO_URL
 from webpage.styles.colors import TextColor
 from webpage.styles.styles import Size
 
@@ -23,13 +23,26 @@ def footer() -> rx.Component:
             is_external=True,
             font_size=Size.MEDIUM.value
         ),
-        rx.text(
-            "Developing software with Python and Linux",
-            font_size=Size.MEDIUM.value,
-            margin_top=Size.ZERO.value,
+        rx.hstack(
+            rx.link(
+                rx.image(
+                    src="icons/github.svg",
+                    height=Size.LARGE.value,
+                    width=Size.LARGE.value,
+                ),
+                href=REPO_URL,
+                is_external=True
+            ),
+            rx.text(
+                "Developing software with Python and Linux",
+                font_size=Size.MEDIUM.value,
+                margin_top=Size.ZERO.value,
+            ),
         ),
         margin_bottom=Size.BIG.value,
         padding_bottom=Size.BIG.value,
         padding_x=Size.BIG.value,
         color=TextColor.BODY.value,
+        align="center",
+        justify="center"
     )
