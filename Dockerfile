@@ -14,4 +14,5 @@ RUN pip install --upgrade pip
 
 RUN pip install --no-cache-dir -r requirements.txt
 RUN reflex init
-CMD reflex run --env prod --backend-only
+CMD reflex run --env prod --backend-only --backend-port 8000
+EXPOSE 8000
