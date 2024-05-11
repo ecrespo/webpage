@@ -12,7 +12,7 @@ year = now.year
 def footer() -> rx.Component:
     return rx.vstack(
         rx.image(
-            src="favicon.ico",
+            src="/favicon.ico",
             height=Size.VERY_BIG.value,
             width=Size.VERY_BIG.value,
             alt="Favico analista",
@@ -26,7 +26,7 @@ def footer() -> rx.Component:
         rx.hstack(
             rx.link(
                 rx.image(
-                    src="icons/github.svg",
+                    src="/icons/github.svg",
                     height=Size.LARGE.value,
                     width=Size.LARGE.value,
                 ),

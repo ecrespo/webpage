@@ -1,15 +1,14 @@
 import reflex as rx
-# import reflex.components.radix.themes as rdxt
+
 from webpage.components.info_text import info_text
 from webpage.components.link_icon import link_icon
-
 from webpage.constants import TWITTER_URL, LINKEDIN_URL, PAGINA_URL, MEDIUM_URL, GITHUB_URL
 from webpage.styles.colors import TextColor, Color
 from webpage.styles.fonts import Font
 from webpage.styles.styles import Size
 
 
-def header()-> rx.Component:
+def sidebar_header()-> rx.Component:
     return rx.vstack(
         rx.hstack(
         rx.avatar(
@@ -24,6 +23,7 @@ def header()-> rx.Component:
             radius="full",
             size="8",
             padding="2px",
+
             border_width="4px",
             border_color=Color.PRIMARY.value,
             ),
@@ -62,5 +62,6 @@ def header()-> rx.Component:
                 color=TextColor.BODY.value,
                 ),
         spacing="5",
+        padding_y="2em",
         align_items="start",
     )
