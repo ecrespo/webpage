@@ -14,4 +14,4 @@ RUN pip install --upgrade pip
 
 RUN pip install --no-cache-dir -r requirements.txt
 RUN reflex init
-RUN reflex run --env prod --backend-only
+CMD reflex run --env prod --backend-only
